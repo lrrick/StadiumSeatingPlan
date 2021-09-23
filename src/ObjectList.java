@@ -56,6 +56,42 @@ public class ObjectList {
 			return false;
 		}
 	}
+	
+	/**
+	 * Gets an object from a specific position in the list
+	 * @param i Position of the object
+	 * @return Returns the object at the specified position, null if no object
+	 * 			
+	 */
+	public Object getObject(int positionIn) {
+		if(positionIn <1  || positionIn>  total) {
+			return null;
+		} else {
+			return list[positionIn -1];
+		}
+	}
+	
+	/** Reads the number of objects in the list */
+	public int getTotal() {
+		return total;
+	}
+	
+	/**
+	 * Removes an object from specified position in list
+	 * @param numberIn the position of the object to be removed
+	 * @return True if object is removed, false if not.
+	 */
+	public boolean removeObject(int positionIn) {
+		if(positionIn < 1 || positionIn > total) {
+			return false;
+		} else {
+			for(int i = positionIn -1; i<= total-2; i++) {
+				list[i] = list[i+1];
+			}
+			total --;
+			return true;
+		}
+	}
 }
 
 
