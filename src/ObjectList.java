@@ -1,5 +1,7 @@
 /**
  * This class is a generic container designed to store lists of objects
+ * Methods include adding, testing if list is full or empty, retrieving details
+ * of a specific object in the list and removing an object from the list.
  * @author lee
  *
  */
@@ -85,7 +87,7 @@ public class ObjectList {
 		if(positionIn < 1 || positionIn > total) {
 			return false;
 		} else {
-			for(int i = positionIn -1; i<= total-2; i++) {
+			for(int i = positionIn -1; i< total-1; i++) {
 				list[i] = list[i+1];
 			}
 			total --;
