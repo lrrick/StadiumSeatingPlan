@@ -12,7 +12,7 @@ public class SeasonTicketHolder {
 	public SeasonTicketHolder (String name, int seatNumber){
 		this.name = name;
 		this.seatNumber = seatNumber;
-		payments - new PaymentList(maxNumberOfPayments);
+		payments = new PaymentList(maxNumberOfPayments);
 	}
 	
 	/** Reads the name of the person */
